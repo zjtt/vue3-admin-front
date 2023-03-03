@@ -48,5 +48,8 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()] // 生成的组件的类型放到这里
     }),
     ElementPlus()
-  ]
+  ],
+  server: {
+    open: true
+  }
 })

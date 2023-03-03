@@ -1,7 +1,13 @@
 <template>
   <div class="sidebar-item-container" v-if="!item.meta || !item.meta.hidden">
     <!-- 如果有一个孩子，或者没孩子，或者有一个孩子但是被hidden了 -->
-    <template v-if="theOnlyOneChildRoute">
+    <template
+      v-if="
+        theOnlyOneChildRoute &&
+        (!theOnlyOneChildRoute.children ||
+          theOnlyOneChildRoute.noShowingChildren)
+      "
+    >
       <!-- 如果没有meta属性意味着不必渲染了 -->
       <sidebar-item-link
         :to="resolvePath(theOnlyOneChildRoute.path)"
@@ -67,21 +73,19 @@ const showingChildNumber = computed(() => {
 // 要渲染的单个路由 如果该路由只有一个子路由 默认直接渲染这个子路由
 // theOnlyOneChildRoute直接通过el-menu-item组件来渲染
 const { item } = toRefs(props)
-const theOnlyOneChildRoute = computed(() => {
+const theOnlyOneChildRoute = computed<
+  (RouteRecordRaw & { noShowingChildren?: boolean }) | null
+>(() => {
   // 多个children时 直接return null 多children需要用el-submenu来渲染并递归
   if (showingChildNumber.value > 1) {
     return null
   }
-  // // 只有一个子路由 还要筛选路由meta里有无hidden属性 hidden：true则过滤出去 不用
-  // 管
-  // // 路由meta里我们会配置hidden属性表示不渲染成菜单，比如login 401 404页面是不渲
-  // 染成菜单的
+  // // 只有一个子路由 还要筛选路由meta里有无hidden属性 hidden：true则过滤出去 不用管
+  // // 路由meta里我们会配置hidden属性表示不渲染成菜单，比如login 401 404页面是不渲染成菜单的
   if (item.value.children) {
     for (const child of item.value.children) {
-      // 安装 pnpm i path-browserify @types/path-browserify
-      // 展开收缩时 el-submenu 样式还需要再调整 ，src/styles/sidebar.scss
       if (!child.meta || !child.meta.hidden) {
-        return child
+        return child // 如果只有一个孩子就返回孩子
       }
     }
   }
@@ -89,7 +93,8 @@ const theOnlyOneChildRoute = computed(() => {
   // 无可渲染chiildren时 把当前路由item作为仅有的子路由渲染
   return {
     ...props.item,
-    path: "" // resolvePath避免resolve拼接时 拼接重复
+    path: "", // resolvePath避免resolve拼接时 拼接重复
+    noShowingChildren: true // 无可渲染的children
   }
 })
 // menu icon
