@@ -8,6 +8,11 @@
       class-name="custom-class"
       @click="sayHi"
     ></svg-icon>
+    <br />
+    <br />
+    <br />
+    <!-- input 输入内容切换路由还在 -->
+    缓存测试 <input type="text" />
   </div>
 </template>
 <script setup lang="ts">
