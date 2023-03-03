@@ -16,10 +16,12 @@
     }
   },
   "dependencies": {
+    "@types/path-browserify": "^1.0.0",
     "@vue/eslint-config-prettier": "^7.1.0",
     "element-plus": "^2.2.32",
     "eslint-plugin-prettier": "^4.2.1",
     "normalize.css": "^8.0.1",
+    "path-browserify": "^1.0.1",
     "pinia": "^2.0.32",
     "prettier": "^2.8.4",
     "unplugin-element-plus": "^0.7.0",

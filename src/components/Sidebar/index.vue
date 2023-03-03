@@ -10,15 +10,26 @@
     :collapse="isCollapse"
     :collapse-transition="true"
   >
-    <sidebar-item></sidebar-item>
+    <!-- 循环sidebar-item组件 -->
+    <sidebar-item
+      v-for="route in menuRoutes"
+      :key="route.path"
+      :item="route"
+      :base-path="route.path"
+    />
   </el-menu>
-  </template>
-  <script lang="ts" setup>
-  import scssVariables from "@/styles/variables.module.scss";
-  const route = useRoute();
-  // 根据路由路径 对应 当前激活的菜单 页面刷新后 激活当前路由匹配的菜单
-  const activeMenu = computed(() => {
-  return route.path;
-  });
-  const isCollapse = ref(false);
-  </script>
+</template>
+<script lang="ts" setup>
+import scssVariables from "@/styles/variables.module.scss"
+import SidebarItem from "./SidebarItem.vue"
+// 导入路由表
+import { routes } from "@/router"
+// 渲染路由
+const menuRoutes = computed(() => routes)
+const route = useRoute()
+// 根据路由路径 对应 当前激活的菜单 页面刷新后 激活当前路由匹配的菜单
+const activeMenu = computed(() => {
+  return route.path
+})
+const isCollapse = ref(false)
+</script>
