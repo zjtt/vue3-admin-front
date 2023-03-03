@@ -1,6 +1,9 @@
 import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
 import path from "path"
+// 用来根据导入的 svg 文件自动生成 symbol 标签并插入 html,生成 svg 雪碧图。
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons"
+
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -11,5 +14,13 @@ export default defineConfig({
       }
     ]
   },
-  plugins: [vue()]
+  plugins: [
+    vue(),
+    createSvgIconsPlugin({
+      iconDirs: [path.resolve(process.cwd(), "src/icons/svg")], // icon存放的目录
+      symbolId: "icon-[name]", // symbol的id
+      inject: "body-last", // 插入的位置
+      customDomId: "__svg__icons__dom__" // svg的id
+    })
+  ]
 })

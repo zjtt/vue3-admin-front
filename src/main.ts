@@ -8,7 +8,14 @@ import "element-plus/dist/index.css"
 import "normalize.css/normalize.css"
 // 全局css
 import "@/styles/index.scss"
+// 自定义 svg 图标，封装成 icon 组件像 element-ui icon 组件似得，通过图标名称来使用图标，也可自定义类名控制
+// 引入icon插件
+import initSvgIcon from "@/icons/index"
+// svg 雪碧图。
+import "virtual:svg-icons-register"
 
 const app = createApp(App)
 app.use(ElementPlus)
+// 使用icon组件
+app.use(initSvgIcon)
 app.use(router).use(createPinia()).mount("#app")
