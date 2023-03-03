@@ -7,10 +7,12 @@ specifiers:
   '@typescript-eslint/parser': ^5.54.0
   '@vitejs/plugin-vue': ^4.0.0
   '@vue/eslint-config-prettier': ^7.1.0
+  element-plus: ^2.2.32
   eslint: ^8.35.0
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-vue: ^9.9.0
   husky: ^8.0.3
+  pinia: ^2.0.32
   prettier: ^2.8.4
   typescript: ^4.9.3
   vite: ^4.1.0
@@ -20,7 +22,9 @@ specifiers:
 
 dependencies:
   '@vue/eslint-config-prettier': registry.npmmirror.com/@vue/eslint-config-prettier/7.1.0_rlq4czn2p5niyau36qwtjimf2y
+  element-plus: registry.npmmirror.com/element-plus/2.2.32_vue@3.2.47
   eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.2.1_rlq4czn2p5niyau36qwtjimf2y
+  pinia: registry.npmmirror.com/pinia/2.0.32_hmuptsblhheur2tugfgucj7gc4
   prettier: registry.npmmirror.com/prettier/2.8.4
   vue: registry.npmmirror.com/vue/3.2.47
   vue-router: registry.npmmirror.com/vue-router/4.1.6_vue@3.2.47
@@ -302,6 +306,24 @@ packages:
       '@jridgewell/trace-mapping': registry.npmmirror.com/@jridgewell/trace-mapping/0.3.9
     dev: true
 
+  registry.npmmirror.com/@ctrl/tinycolor/3.6.0:
+    resolution: {integrity: sha512-/Z3l6pXthq0JvMYdUFyX9j0MaCltlIn6mfh9jLyQwg5aPKxkyNa0PTHtU1AlFXLNk55ZuAeJRcpvq+tmLfKmaQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@ctrl/tinycolor/-/tinycolor-3.6.0.tgz}
+    name: '@ctrl/tinycolor'
+    version: 3.6.0
+    engines: {node: '>=10'}
+    dev: false
+
+  registry.npmmirror.com/@element-plus/icons-vue/2.0.10_vue@3.2.47:
+    resolution: {integrity: sha512-ygEZ1mwPjcPo/OulhzLE7mtDrQBWI8vZzEWSNB2W/RNCRjoQGwbaK4N8lV4rid7Ts4qvySU3njMN7YCiSlSaTQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@element-plus/icons-vue/-/icons-vue-2.0.10.tgz}
+    id: registry.npmmirror.com/@element-plus/icons-vue/2.0.10
+    name: '@element-plus/icons-vue'
+    version: 2.0.10
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.2.47
+    dev: false
+
   registry.npmmirror.com/@esbuild/android-arm/0.16.17:
     resolution: {integrity: sha512-N9x1CMXVhtWEAMS7pNNONyA14f71VPQN9Cnavj1XQh6T7bskqiLLrSca4O0Vr8Wdcga943eThxnVp3JLnBMYtw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@esbuild/android-arm/-/android-arm-0.16.17.tgz}
     name: '@esbuild/android-arm'
@@ -568,6 +590,20 @@ packages:
     version: 8.35.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
+  registry.npmmirror.com/@floating-ui/core/1.2.2:
+    resolution: {integrity: sha512-FaO9KVLFnxknZaGWGmNtjD2CVFuc0u4yeGEofoyXO2wgRA7fLtkngT6UB0vtWQWuhH3iMTZZ/Y89CMeyGfn8pA==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@floating-ui/core/-/core-1.2.2.tgz}
+    name: '@floating-ui/core'
+    version: 1.2.2
+    dev: false
+
+  registry.npmmirror.com/@floating-ui/dom/1.2.3:
+    resolution: {integrity: sha512-lK9cZUrHSJLMVAdCvDqs6Ug8gr0wmqksYiaoj/bxj2gweRQkSuhg2/V6Jswz2KiQ0RAULbqw1oQDJIMpQ5GfGA==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@floating-ui/dom/-/dom-1.2.3.tgz}
+    name: '@floating-ui/dom'
+    version: 1.2.3
+    dependencies:
+      '@floating-ui/core': registry.npmmirror.com/@floating-ui/core/1.2.2
+    dev: false
+
   registry.npmmirror.com/@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz}
     name: '@humanwhocodes/config-array'
@@ -637,6 +673,12 @@ packages:
       '@nodelib/fs.scandir': registry.npmmirror.com/@nodelib/fs.scandir/2.1.5
       fastq: registry.npmmirror.com/fastq/1.15.0
 
+  registry.npmmirror.com/@sxzz/popperjs-es/2.11.7:
+    resolution: {integrity: sha512-Ccy0NlLkzr0Ex2FKvh2X+OyERHXJ88XJ1MXtsI9y9fGexlaXaVTPzBCRBwIxFkORuOb+uBqeu+RqnpgYTEZRUQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@sxzz/popperjs-es/-/popperjs-es-2.11.7.tgz}
+    name: '@sxzz/popperjs-es'
+    version: 2.11.7
+    dev: false
+
   registry.npmmirror.com/@tsconfig/node10/1.0.9:
     resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@tsconfig/node10/-/node10-1.0.9.tgz}
     name: '@tsconfig/node10'
@@ -667,6 +709,20 @@ packages:
     version: 7.0.11
     dev: true
 
+  registry.npmmirror.com/@types/lodash-es/4.17.6:
+    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@types/lodash-es/-/lodash-es-4.17.6.tgz}
+    name: '@types/lodash-es'
+    version: 4.17.6
+    dependencies:
+      '@types/lodash': registry.npmmirror.com/@types/lodash/4.14.191
+    dev: false
+
+  registry.npmmirror.com/@types/lodash/4.14.191:
+    resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@types/lodash/-/lodash-4.14.191.tgz}
+    name: '@types/lodash'
+    version: 4.14.191
+    dev: false
+
   registry.npmmirror.com/@types/minimist/1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@types/minimist/-/minimist-1.2.2.tgz}
     name: '@types/minimist'
@@ -690,6 +746,12 @@ packages:
     name: '@types/semver'
     version: 7.3.13
     dev: true
+
+  registry.npmmirror.com/@types/web-bluetooth/0.0.16:
+    resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.16.tgz}
+    name: '@types/web-bluetooth'
+    version: 0.0.16
+    dev: false
 
   registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.54.0_6mj2wypvdnknez7kws2nfdgupi:
     resolution: {integrity: sha512-+hSN9BdSr629RF02d7mMtXhAJvDTyCbprNYJKrXETlul/Aml6YZwd90XioVbjejQeHbb3R8Dg0CkRgoJDxo8aw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.54.0.tgz}
@@ -1020,6 +1082,39 @@ packages:
     name: '@vue/shared'
     version: 3.2.47
 
+  registry.npmmirror.com/@vueuse/core/9.13.0_vue@3.2.47:
+    resolution: {integrity: sha512-pujnclbeHWxxPRqXWmdkKV5OX4Wk4YeK7wusHqRwU0Q7EFusHoqNA/aPhB6KCh9hEqJkLAJo7bb0Lh9b+OIVzw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@vueuse/core/-/core-9.13.0.tgz}
+    id: registry.npmmirror.com/@vueuse/core/9.13.0
+    name: '@vueuse/core'
+    version: 9.13.0
+    dependencies:
+      '@types/web-bluetooth': registry.npmmirror.com/@types/web-bluetooth/0.0.16
+      '@vueuse/metadata': registry.npmmirror.com/@vueuse/metadata/9.13.0
+      '@vueuse/shared': registry.npmmirror.com/@vueuse/shared/9.13.0_vue@3.2.47
+      vue-demi: registry.npmmirror.com/vue-demi/0.13.11_vue@3.2.47
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  registry.npmmirror.com/@vueuse/metadata/9.13.0:
+    resolution: {integrity: sha512-gdU7TKNAUVlXXLbaF+ZCfte8BjRJQWPCa2J55+7/h+yDtzw3vOoGQDRXzI6pyKyo6bXFT5/QoPE4hAknExjRLQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@vueuse/metadata/-/metadata-9.13.0.tgz}
+    name: '@vueuse/metadata'
+    version: 9.13.0
+    dev: false
+
+  registry.npmmirror.com/@vueuse/shared/9.13.0_vue@3.2.47:
+    resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@vueuse/shared/-/shared-9.13.0.tgz}
+    id: registry.npmmirror.com/@vueuse/shared/9.13.0
+    name: '@vueuse/shared'
+    version: 9.13.0
+    dependencies:
+      vue-demi: registry.npmmirror.com/vue-demi/0.13.11_vue@3.2.47
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
   registry.npmmirror.com/JSONStream/1.3.5:
     resolution: {integrity: sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/JSONStream/-/JSONStream-1.3.5.tgz}
     name: JSONStream
@@ -1128,6 +1223,12 @@ packages:
     version: 1.0.1
     engines: {node: '>=0.10.0'}
     dev: true
+
+  registry.npmmirror.com/async-validator/4.2.5:
+    resolution: {integrity: sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/async-validator/-/async-validator-4.2.5.tgz}
+    name: async-validator
+    version: 4.2.5
+    dev: false
 
   registry.npmmirror.com/balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/balanced-match/-/balanced-match-1.0.2.tgz}
@@ -1363,6 +1464,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  registry.npmmirror.com/dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.7.tgz}
+    name: dayjs
+    version: 1.11.7
+    dev: false
+
   registry.npmmirror.com/de-indent/1.0.2:
     resolution: {integrity: sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/de-indent/-/de-indent-1.0.2.tgz}
     name: de-indent
@@ -1437,6 +1544,34 @@ packages:
       is-obj: registry.npmmirror.com/is-obj/2.0.0
     dev: true
 
+  registry.npmmirror.com/element-plus/2.2.32_vue@3.2.47:
+    resolution: {integrity: sha512-DTJMhYOy6MApbmh6z/95hPTK5WrBiNHGzV4IN+uEkup1WoimQ+Qyt8RxKdTe/X1LWEJ8YgWv/Cl8P4ocrt5z5g==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/element-plus/-/element-plus-2.2.32.tgz}
+    id: registry.npmmirror.com/element-plus/2.2.32
+    name: element-plus
+    version: 2.2.32
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@ctrl/tinycolor': registry.npmmirror.com/@ctrl/tinycolor/3.6.0
+      '@element-plus/icons-vue': registry.npmmirror.com/@element-plus/icons-vue/2.0.10_vue@3.2.47
+      '@floating-ui/dom': registry.npmmirror.com/@floating-ui/dom/1.2.3
+      '@popperjs/core': registry.npmmirror.com/@sxzz/popperjs-es/2.11.7
+      '@types/lodash': registry.npmmirror.com/@types/lodash/4.14.191
+      '@types/lodash-es': registry.npmmirror.com/@types/lodash-es/4.17.6
+      '@vueuse/core': registry.npmmirror.com/@vueuse/core/9.13.0_vue@3.2.47
+      async-validator: registry.npmmirror.com/async-validator/4.2.5
+      dayjs: registry.npmmirror.com/dayjs/1.11.7
+      escape-html: registry.npmmirror.com/escape-html/1.0.3
+      lodash: registry.npmmirror.com/lodash/4.17.21
+      lodash-es: registry.npmmirror.com/lodash-es/4.17.21
+      lodash-unified: registry.npmmirror.com/lodash-unified/1.0.3_3ib2ivapxullxkx3xftsimdk7u
+      memoize-one: registry.npmmirror.com/memoize-one/6.0.0
+      normalize-wheel-es: registry.npmmirror.com/normalize-wheel-es/1.2.0
+      vue: registry.npmmirror.com/vue/3.2.47
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: false
+
   registry.npmmirror.com/emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/emoji-regex/-/emoji-regex-8.0.0.tgz}
     name: emoji-regex
@@ -1489,6 +1624,12 @@ packages:
     version: 3.1.1
     engines: {node: '>=6'}
     dev: true
+
+  registry.npmmirror.com/escape-html/1.0.3:
+    resolution: {integrity: sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/escape-html/-/escape-html-1.0.3.tgz}
+    name: escape-html
+    version: 1.0.3
+    dev: false
 
   registry.npmmirror.com/escape-string-regexp/1.0.5:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz}
@@ -2250,6 +2391,27 @@ packages:
     dependencies:
       p-locate: registry.npmmirror.com/p-locate/5.0.0
 
+  registry.npmmirror.com/lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz}
+    name: lodash-es
+    version: 4.17.21
+    dev: false
+
+  registry.npmmirror.com/lodash-unified/1.0.3_3ib2ivapxullxkx3xftsimdk7u:
+    resolution: {integrity: sha512-WK9qSozxXOD7ZJQlpSqOT+om2ZfcT4yO+03FuzAHD0wF6S0l0090LRPDx3vhTTLZ8cFKpBn+IOcVXK6qOcIlfQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/lodash-unified/-/lodash-unified-1.0.3.tgz}
+    id: registry.npmmirror.com/lodash-unified/1.0.3
+    name: lodash-unified
+    version: 1.0.3
+    peerDependencies:
+      '@types/lodash-es': '*'
+      lodash: '*'
+      lodash-es: '*'
+    dependencies:
+      '@types/lodash-es': registry.npmmirror.com/@types/lodash-es/4.17.6
+      lodash: registry.npmmirror.com/lodash/4.17.21
+      lodash-es: registry.npmmirror.com/lodash-es/4.17.21
+    dev: false
+
   registry.npmmirror.com/lodash.camelcase/4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz}
     name: lodash.camelcase
@@ -2313,7 +2475,6 @@ packages:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz}
     name: lodash
     version: 4.17.21
-    dev: true
 
   registry.npmmirror.com/lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/lru-cache/-/lru-cache-6.0.0.tgz}
@@ -2350,6 +2511,12 @@ packages:
     version: 4.3.0
     engines: {node: '>=8'}
     dev: true
+
+  registry.npmmirror.com/memoize-one/6.0.0:
+    resolution: {integrity: sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/memoize-one/-/memoize-one-6.0.0.tgz}
+    name: memoize-one
+    version: 6.0.0
+    dev: false
 
   registry.npmmirror.com/meow/8.1.2:
     resolution: {integrity: sha512-r85E3NdZ+mpYk1C6RjPFEMSE+s1iZMuHtsHAqY0DT3jZczl0diWUZ8g6oU7h0M9cD2EL+PzaYghhCLzR0ZNn5Q==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/meow/-/meow-8.1.2.tgz}
@@ -2491,6 +2658,12 @@ packages:
       semver: registry.npmmirror.com/semver/7.3.8
       validate-npm-package-license: registry.npmmirror.com/validate-npm-package-license/3.0.4
     dev: true
+
+  registry.npmmirror.com/normalize-wheel-es/1.2.0:
+    resolution: {integrity: sha512-Wj7+EJQ8mSuXr2iWfnujrimU35R2W4FAErEyTmJoJ7ucwTn2hOUSsRehMb5RSYkxXGTM7Y9QpvPmp++w5ftoJw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/normalize-wheel-es/-/normalize-wheel-es-1.2.0.tgz}
+    name: normalize-wheel-es
+    version: 1.2.0
+    dev: false
 
   registry.npmmirror.com/npm-run-path/4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/npm-run-path/-/npm-run-path-4.0.1.tgz}
@@ -2641,6 +2814,27 @@ packages:
     version: 2.3.1
     engines: {node: '>=8.6'}
     dev: true
+
+  registry.npmmirror.com/pinia/2.0.32_hmuptsblhheur2tugfgucj7gc4:
+    resolution: {integrity: sha512-8Tw4OrpCSJ028UUyp0gYPP/wyjigLoEceuO/x1G+FlHVf73337e5vLm4uDmrRIoBG1hvaed/eSHnrCFjOc4nkA==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/pinia/-/pinia-2.0.32.tgz}
+    id: registry.npmmirror.com/pinia/2.0.32
+    name: pinia
+    version: 2.0.32
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.5.0
+      typescript: registry.npmmirror.com/typescript/4.9.5
+      vue: registry.npmmirror.com/vue/3.2.47
+      vue-demi: registry.npmmirror.com/vue-demi/0.13.11_vue@3.2.47
+    dev: false
 
   registry.npmmirror.com/postcss-selector-parser/6.0.11:
     resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/postcss-selector-parser/-/postcss-selector-parser-6.0.11.tgz}
@@ -3159,7 +3353,6 @@ packages:
     version: 4.9.5
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   registry.npmmirror.com/universalify/2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/universalify/-/universalify-2.0.0.tgz}
@@ -3230,6 +3423,24 @@ packages:
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
+
+  registry.npmmirror.com/vue-demi/0.13.11_vue@3.2.47:
+    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.13.11.tgz}
+    id: registry.npmmirror.com/vue-demi/0.13.11
+    name: vue-demi
+    version: 0.13.11
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.2.47
+    dev: false
 
   registry.npmmirror.com/vue-eslint-parser/9.1.0_eslint@8.35.0:
     resolution: {integrity: sha512-NGn/iQy8/Wb7RrRa4aRkokyCZfOUWk19OP5HP6JEozQFX5AoS/t+Z0ZN7FY4LlmWc4FNI922V7cvX28zctN8dQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/vue-eslint-parser/-/vue-eslint-parser-9.1.0.tgz}

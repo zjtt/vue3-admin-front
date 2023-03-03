@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint --fix --ext .ts,.tsx,.vue src",
+    "lint": "eslint --fix --ext .ts,.tsx,.vue src"
   },
   "husky": {
     "hooks": {
@@ -16,9 +16,12 @@
   },
   "dependencies": {
     "@vue/eslint-config-prettier": "^7.1.0",
+    "element-plus": "^2.2.32",
     "eslint-plugin-prettier": "^4.2.1",
+    "pinia": "^2.0.32",
     "prettier": "^2.8.4",
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",

@@ -27,6 +27,8 @@ module.exports = {
   plugins: ["vue", "@typescript-eslint"],
   rules: {
     // 我们自定义的规则写在这里
+    // 我们自定义的规则写在这里
+    "vue/multi-word-component-names": "off",
     "prettier/prettier": [
       "error",
       {
