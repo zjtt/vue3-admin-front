@@ -1,13 +1,14 @@
 <template>
   <div class="sidebar-item-container" v-if="!item.meta || !item.meta.hidden">
     <!-- 如果有一个孩子，或者没孩子，或者有一个孩子但是被hidden了 -->
-    <template
+    <!-- <template
       v-if="
         theOnlyOneChildRoute &&
         (!theOnlyOneChildRoute.children ||
           theOnlyOneChildRoute.noShowingChildren)
       "
-    >
+    > -->
+    <template v-if="!alwaysShowRootMenu && theOnlyOneChildRoute">
       <!-- 如果没有meta属性意味着不必渲染了 -->
       <sidebar-item-link
         :to="resolvePath(theOnlyOneChildRoute.path)"
@@ -105,6 +106,10 @@ const icon = computed(() => {
     (props.item.meta && props.item.meta.icon)
   )
 })
+// 判断路由的meta是否有alwaysShow属性
+const alwaysShowRootMenu = computed(
+  () => props.item.meta && props.item.meta.alwaysShow
+)
 // 利用path.resolve 根据父路径+子路径 解析成正确路径 子路径可能是相对的
 // resolvePath在模板中使用
 const resolvePath = (childPath: string) => {
