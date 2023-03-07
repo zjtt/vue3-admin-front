@@ -18,7 +18,7 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
         meta: {
           title: "Documentation",
           icon: "documentation",
-          hidden: true // 主要是控制某些路由不用渲染成菜单，比如 login 404 401 等路由
+          // hidden: true // 主要是控制某些路由不用渲染成菜单，比如 login 404 401 等路由
         },
       },
     ],
@@ -37,6 +37,8 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
         meta: {
           title: "Guide",
           icon: "guide",
+          // 默认加载Guide时，/documentation/index高亮显示
+          activeMenu: "/documentation/index"
         },
       },
     ],
