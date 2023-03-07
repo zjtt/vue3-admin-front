@@ -16,6 +16,7 @@ specifiers:
   normalize.css: ^8.0.1
   path-browserify: ^1.0.1
   pinia: ^2.0.32
+  pinia-plugin-persistedstate: ^3.1.0
   prettier: ^2.8.4
   sass: ^1.58.3
   svgo: ^3.0.2
@@ -37,6 +38,7 @@ dependencies:
   normalize.css: registry.npmmirror.com/normalize.css/8.0.1
   path-browserify: registry.npmmirror.com/path-browserify/1.0.1
   pinia: registry.npmmirror.com/pinia/2.0.32_hmuptsblhheur2tugfgucj7gc4
+  pinia-plugin-persistedstate: registry.npmmirror.com/pinia-plugin-persistedstate/3.1.0_pinia@2.0.32
   prettier: registry.npmmirror.com/prettier/2.8.4
   unplugin-element-plus: registry.npmmirror.com/unplugin-element-plus/0.7.0
   vue: registry.npmmirror.com/vue/3.2.47
@@ -4596,6 +4598,17 @@ packages:
     name: picomatch
     version: 2.3.1
     engines: {node: '>=8.6'}
+
+  registry.npmmirror.com/pinia-plugin-persistedstate/3.1.0_pinia@2.0.32:
+    resolution: {integrity: sha512-8UN+vYMEPBdgNLwceY08mi5olI0wkYaEb8b6hD6xW7SnBRuPydWHlEhZvUWgNb/ibuf4PvufpvtS+dmhYjJQOw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/pinia-plugin-persistedstate/-/pinia-plugin-persistedstate-3.1.0.tgz}
+    id: registry.npmmirror.com/pinia-plugin-persistedstate/3.1.0
+    name: pinia-plugin-persistedstate
+    version: 3.1.0
+    peerDependencies:
+      pinia: ^2.0.0
+    dependencies:
+      pinia: registry.npmmirror.com/pinia/2.0.32_hmuptsblhheur2tugfgucj7gc4
+    dev: false
 
   registry.npmmirror.com/pinia/2.0.32_hmuptsblhheur2tugfgucj7gc4:
     resolution: {integrity: sha512-8Tw4OrpCSJ028UUyp0gYPP/wyjigLoEceuO/x1G+FlHVf73337e5vLm4uDmrRIoBG1hvaed/eSHnrCFjOc4nkA==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/pinia/-/pinia-2.0.32.tgz}

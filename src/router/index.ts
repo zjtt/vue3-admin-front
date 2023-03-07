@@ -38,7 +38,7 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
           title: "Guide",
           icon: "guide",
           // 默认加载Guide时，/documentation/index高亮显示
-          activeMenu: "/documentation/index"
+          // activeMenu: "/documentation/index"
         },
       },
     ],
@@ -115,7 +115,8 @@ const constantRoutes: Array<RouteRecordRaw> = [
             /* webpackChunkName: "dashboard" */ "@/views/dashboard/index.vue"
           ),
         meta: {
-          title: "Dashboard" // 需要配置声明文件否则无提示
+          title: "Dashboard", // 需要配置声明文件否则无提示
+          icon: "dashboard"
         }
       }
     ]

@@ -15,10 +15,15 @@ import initSvgIcon from "@/icons/index"
 import "virtual:svg-icons-register"
 // 注册element-plus
 import installElementPlus from "./plugins/element"
+import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 
+const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate);
 const app = createApp(App)
+app.use(pinia);
 // app.use(ElementPlus)
 app.use(installElementPlus)
 // 使用icon组件
 app.use(initSvgIcon)
-app.use(router).use(createPinia()).mount("#app")
+app.use(router)
+app.mount("#app")
