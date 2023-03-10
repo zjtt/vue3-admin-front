@@ -1,3 +1,4 @@
+import { Size } from "@/plugins/element";
 import { defineStore } from 'pinia'
 export const useAppStore = defineStore(
   'app',
@@ -8,14 +9,20 @@ export const useAppStore = defineStore(
         // sidebar 展开状态
         opened: true,
       },
+      size: "default",
     })
     const sidebar = computed(() => state.siderbar);
+    const size = computed(() => state.size);
+    const setSize = (size: Size) => {
+      state.size = size;
+    };
+    // a
     // actions
     const toggleSidebar = () => {
       state.siderbar.opened = !state.siderbar.opened;
     };
     // 需要导出响应式数据，persist 插件才会存储
-    return { state, sidebar, toggleSidebar };
+    return { state, sidebar, toggleSidebar, setSize, size };
   },
   {
     // 所有数据持久化
@@ -27,6 +34,6 @@ export const useAppStore = defineStore(
       // 修改为 sessionStorage，默认为 localStorage
       storage: window.sessionStorage,
       // 部分持久化状态的点符号路径数组，[]意味着没有状态被持久化(默认为undefined，持久化整个状态)
-      paths: ["state.siderbar.opened"],
+      paths: ["state.siderbar.opened", "state.size"],
     },
   })
