@@ -63,26 +63,26 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
           icon: "list",
         },
       },
-      // {
-      //   path: "role",
-      //   component: () =>
-      //     import(/* webpackChunkName: "role" */
-      //       "@/views/system/role.vue"),
-      //   meta: {
-      //     title: "Role Management",
-      //     icon: "list",
-      //   },
-      // },
-      // {
-      //   path: "user",
-      //   component: () =>
-      //     import(/* webpackChunkName: "user" */
-      //       "@/views/system/user.vue"),
-      //   meta: {
-      //     title: "User Management",
-      //     icon: "list",
-      //   },
-      // },
+      {
+        path: "role",
+        component: () =>
+          import(/* webpackChunkName: "role" */
+            "@/views/system/role.vue"),
+        meta: {
+          title: "Role Management",
+          icon: "list",
+        },
+      },
+      {
+        path: "user",
+        component: () =>
+          import(/* webpackChunkName: "user" */
+            "@/views/system/user.vue"),
+        meta: {
+          title: "User Management",
+          icon: "list",
+        },
+      },
     ],
   },
   {

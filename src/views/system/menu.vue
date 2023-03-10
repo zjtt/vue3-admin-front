@@ -1,5 +1,9 @@
 <template>
   <div>
-  <h1>Menu page</h1>
+    <h1>Menu page</h1>
   </div>
-  </template>
+</template>
+
+<script setup lang="ts"></script>
+
+<style scoped></style>

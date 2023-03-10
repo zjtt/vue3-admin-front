@@ -1,6 +1,7 @@
 <template>
   <div class="navbar">
     <hambuger @toggleClick="toggleSidebar" :is-active="sidebar.opened" />
+    <breadcrumb></breadcrumb>
   </div>
 </template>
 <script lang="ts" setup>
