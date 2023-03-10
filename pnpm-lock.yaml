@@ -20,6 +20,7 @@ specifiers:
   pinia-plugin-persistedstate: ^3.1.0
   prettier: ^2.8.4
   sass: ^1.58.3
+  screenfull: ^6.0.2
   svgo: ^3.0.2
   typescript: ^4.9.3
   unplugin-auto-import: ^0.15.0
@@ -42,6 +43,7 @@ dependencies:
   pinia: registry.npmmirror.com/pinia/2.0.32_hmuptsblhheur2tugfgucj7gc4
   pinia-plugin-persistedstate: registry.npmmirror.com/pinia-plugin-persistedstate/3.1.0_pinia@2.0.32
   prettier: registry.npmmirror.com/prettier/2.8.4
+  screenfull: registry.npmmirror.com/screenfull/6.0.2
   unplugin-element-plus: registry.npmmirror.com/unplugin-element-plus/0.7.0
   vue: registry.npmmirror.com/vue/3.2.47
   vue-router: registry.npmmirror.com/vue-router/4.1.6_vue@3.2.47
@@ -5051,6 +5053,13 @@ packages:
       immutable: registry.npmmirror.com/immutable/4.2.4
       source-map-js: registry.npmmirror.com/source-map-js/1.0.2
     dev: true
+
+  registry.npmmirror.com/screenfull/6.0.2:
+    resolution: {integrity: sha512-AQdy8s4WhNvUZ6P8F6PB21tSPIYKniic+Ogx0AacBMjKP1GUHN2E9URxQHtCusiwxudnCKkdy4GrHXPPJSkCCw==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/screenfull/-/screenfull-6.0.2.tgz}
+    name: screenfull
+    version: 6.0.2
+    engines: {node: ^14.13.1 || >=16.0.0}
+    dev: false
 
   registry.npmmirror.com/scule/1.0.0:
     resolution: {integrity: sha512-4AsO/FrViE/iDNEPaAQlb77tf0csuq27EsVpy6ett584EcRTp6pTDLoGWVxCD77y5iU5FauOvhsI4o1APwPoSQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/scule/-/scule-1.0.0.tgz}

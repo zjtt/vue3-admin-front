@@ -5,8 +5,8 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
-export { }
-// 会自动增加页面内使用组件的声明
+export {}
+
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Breadcrumb: typeof import('./components/Breadcrumb/index.vue')['default']
@@ -22,6 +22,7 @@ declare module '@vue/runtime-core' {
     Navbar: typeof import('./components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Screenfull: typeof import('./components/Screenfull/index.vue')['default']
     Sidebar: typeof import('./components/Sidebar/index.vue')['default']
     SidebarItem: typeof import('./components/Sidebar/SidebarItem.vue')['default']
     SidebarItemLink: typeof import('./components/Sidebar/SidebarItemLink.vue')['default']
