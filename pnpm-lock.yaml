@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.4.4
   '@commitlint/config-conventional': ^17.4.4
+  '@element-plus/icons-vue': ^2.1.0
   '@types/path-browserify': ^1.0.0
   '@typescript-eslint/eslint-plugin': ^5.54.0
   '@typescript-eslint/parser': ^5.54.0
@@ -33,6 +34,7 @@ specifiers:
   vue-tsc: ^1.0.24
 
 dependencies:
+  '@element-plus/icons-vue': registry.npmmirror.com/@element-plus/icons-vue/2.1.0_vue@3.2.47
   '@types/path-browserify': registry.npmmirror.com/@types/path-browserify/1.0.0
   '@vue/eslint-config-prettier': registry.npmmirror.com/@vue/eslint-config-prettier/7.1.0_rlq4czn2p5niyau36qwtjimf2y
   element-plus: registry.npmmirror.com/element-plus/2.2.32_vue@3.2.47
@@ -543,11 +545,11 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  registry.npmmirror.com/@element-plus/icons-vue/2.0.10_vue@3.2.47:
-    resolution: {integrity: sha512-ygEZ1mwPjcPo/OulhzLE7mtDrQBWI8vZzEWSNB2W/RNCRjoQGwbaK4N8lV4rid7Ts4qvySU3njMN7YCiSlSaTQ==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@element-plus/icons-vue/-/icons-vue-2.0.10.tgz}
-    id: registry.npmmirror.com/@element-plus/icons-vue/2.0.10
+  registry.npmmirror.com/@element-plus/icons-vue/2.1.0_vue@3.2.47:
+    resolution: {integrity: sha512-PSBn3elNoanENc1vnCfh+3WA9fimRC7n+fWkf3rE5jvv+aBohNHABC/KAR5KWPecxWxDTVT1ERpRbOMRcOV/vA==, registry: http://cnpm.chinaso365.com/, tarball: https://registry.npmmirror.com/@element-plus/icons-vue/-/icons-vue-2.1.0.tgz}
+    id: registry.npmmirror.com/@element-plus/icons-vue/2.1.0
     name: '@element-plus/icons-vue'
-    version: 2.0.10
+    version: 2.1.0
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -2462,7 +2464,7 @@ packages:
       vue: ^3.2.0
     dependencies:
       '@ctrl/tinycolor': registry.npmmirror.com/@ctrl/tinycolor/3.6.0
-      '@element-plus/icons-vue': registry.npmmirror.com/@element-plus/icons-vue/2.0.10_vue@3.2.47
+      '@element-plus/icons-vue': registry.npmmirror.com/@element-plus/icons-vue/2.1.0_vue@3.2.47
       '@floating-ui/dom': registry.npmmirror.com/@floating-ui/dom/1.2.3
       '@popperjs/core': registry.npmmirror.com/@sxzz/popperjs-es/2.11.7
       '@types/lodash': registry.npmmirror.com/@types/lodash/4.14.191

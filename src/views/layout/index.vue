@@ -6,8 +6,9 @@
     <div class="main-container">
       <div class="header">
         <!-- <div class="navbar">navbar</div> -->
+        <!-- <div class="tags-view">tagsview</div> -->
         <navbar></navbar>
-        <div class="tags-view">tagsview</div>
+        <tags-view></tags-view>
       </div>
       <!-- <div class="app-main">
         <h2>app main</h2>
@@ -32,8 +33,12 @@ import AppMain from "./components/AppMain.vue"
     .header {
       // background: cyan;
       .navbar {
-        height: 50px;
+        // height: 50px;
         // background: #1890ff;
+        display: flex;
+        background: #fff;
+        border-bottom: 1px solid rgba(0, 21, 41, 0.08);
+        box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
       }
       .tags-view {
         height: 34px;

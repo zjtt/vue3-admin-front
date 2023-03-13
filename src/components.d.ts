@@ -5,9 +5,8 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
-export { }
+export {}
 
-// 组件中使用新的elementui组件会自动在这里添加说明
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Avatar: typeof import('./components/Avatar/index.vue')['default']
@@ -36,5 +35,6 @@ declare module '@vue/runtime-core' {
     SidebarItemLink: typeof import('./components/Sidebar/SidebarItemLink.vue')['default']
     SizeSelect: typeof import('./components/SizeSelect/index.vue')['default']
     SvgIcon: typeof import('./components/SvgIcon/index.vue')['default']
+    TagsView: typeof import('./components/TagsView/index.vue')['default']
   }
 }
