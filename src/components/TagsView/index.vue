@@ -49,6 +49,30 @@ const isActive = (tag: RouteLocationNormalized) => {
 // 关闭当前右键的tag路由
 const closeSelectedTag = (view: RouteLocationNormalized) => {
   store.delView(view)
+  // 如果移除的view是当前选中状态view, 就让删除后的集合中最后一个tag view为选中态
+  if (isActive(view)) {
+    toLastView(visitedViews.value, view)
+  }
+}
+const router = useRouter() // vite.config.js中已经自动引入
+const toLastView = (
+  visitedViews: RouteLocationNormalized[],
+  view: RouteLocationNormalized
+) => {
+  // 得到集合中最后一个项tag view 可能没有
+  const lastView = visitedViews[visitedViews.length - 1]
+  if (lastView) {
+    router.push(lastView.path)
+  } else {
+    // 集合中都没有tag view时
+    // 如果刚刚删除的正是Dashboard 就重定向回Dashboard（首页）
+    if (view.name === "Dashboard") {
+      router.push({ path: view.path })
+    } else {
+      // tag都没有了 删除的也不是Dashboard 只能跳转首页
+      router.push("/")
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
