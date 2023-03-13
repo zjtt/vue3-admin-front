@@ -81,6 +81,7 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
         meta: {
           title: "User Management",
           icon: "list",
+          affix: true
         },
       },
     ],

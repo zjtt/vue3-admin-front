@@ -12,7 +12,7 @@
         :to="{ path: tag.path, query: tag.query }"
       >
         <span>{{ tag.meta.title }}</span>
-        <el-icon class="icon-close">
+        <el-icon class="icon-close" v-if="!isAffix(tag)">
           <CloseBold @click.prevent.stop="closeSelectedTag(tag)" />
         </el-icon>
       </router-link>
@@ -22,8 +22,50 @@
 <script lang="ts" setup>
 import { useTagsView } from "@/stores/tagsView"
 import { storeToRefs } from "pinia"
-import { RouteLocationNormalized } from "vue-router"
+import { RouteLocationNormalized, RouteRecordRaw } from "vue-router"
 import { CloseBold } from "@element-plus/icons-vue"
+import path from "path-browserify"
+import { routes } from "@/router"
+const fillterAffixTags = (routes: RouteRecordRaw[], basePath = "/") => {
+  let tags: RouteLocationNormalized[] = []
+  routes.forEach((route) => {
+    if (route.meta && route.meta.affix) {
+      // 把路由路径解析成完整路径，路由可能是相对路径
+      const tagPath = path.resolve(basePath, route.path)
+      tags.push({
+        name: route.name,
+        path: tagPath,
+        meta: { ...route.meta }
+      } as RouteLocationNormalized)
+    }
+    // 深度优先遍历 子路由（子路由路径可能相对于route.path父路由路径）
+    if (route.children) {
+      const childTags = fillterAffixTags(route.children, route.path)
+      if (childTags.length) {
+        tags = [...tags, ...childTags]
+      }
+    }
+  })
+  return tags
+}
+const initTags = () => {
+  const affixTags = fillterAffixTags(routes)
+  console.log("affixTags:", affixTags)
+  for (const tag of affixTags) {
+    if (tag.name) {
+      store.addView(tag)
+    }
+  }
+}
+const isAffix = (tag: RouteLocationNormalized) => {
+  // 有这个属性则此路由固定在开头且不可删除
+  return tag.meta && tag.meta.affix
+}
+onMounted(() => {
+  // vue的apionMounted会自动导入
+  initTags()
+})
+
 const store = useTagsView()
 const { visitedViews } = storeToRefs(store)
 const route = useRoute()
