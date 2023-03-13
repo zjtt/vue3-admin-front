@@ -55,6 +55,8 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
     children: [
       {
         path: "menu",
+        // 使用标签导航的路由 必须要 name 属性 因为方便我们根据 name 进行路由筛选和缓存keep-alive
+        name: "Menu Management",
         component: () =>
           import(/* webpackChunkName: "menu" */
             "@/views/system/menu.vue"),
@@ -65,6 +67,7 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
       },
       {
         path: "role",
+        name: "Role Management",
         component: () =>
           import(/* webpackChunkName: "role" */
             "@/views/system/role.vue"),
@@ -75,6 +78,7 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
       },
       {
         path: "user",
+        name: "User Management",
         component: () =>
           import(/* webpackChunkName: "user" */
             "@/views/system/user.vue"),
