@@ -5,10 +5,12 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
-export {}
+export { }
 
+// 组件中使用新的elementui组件会自动在这里添加说明
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Avatar: typeof import('./components/Avatar/index.vue')['default']
     Breadcrumb: typeof import('./components/Breadcrumb/index.vue')['default']
     Counter: typeof import('./components/Counter/index.vue')['default']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']

@@ -16,7 +16,6 @@ export const useAppStore = defineStore(
     const setSize = (size: Size) => {
       state.size = size;
     };
-    // a
     // actions
     const toggleSidebar = () => {
       state.siderbar.opened = !state.siderbar.opened;
