@@ -11,6 +11,8 @@ import Components from "unplugin-vue-components/vite"
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers"
 // 按需导入elementui样式
 import ElementPlus from "unplugin-element-plus/vite"
+// 方便给组件添加name属性
+import DefineOptions from "unplugin-vue-define-options/vite";
 // import {
 //   createStyleImportPlugin,
 //   ElementPlusResolve
@@ -28,6 +30,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    DefineOptions(), // 方便给组件添加name属性
     createSvgIconsPlugin({
       iconDirs: [path.resolve(process.cwd(), "src/icons/svg")], // icon存放的目录
       symbolId: "icon-[name]", // symbol的id

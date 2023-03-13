@@ -3,6 +3,9 @@
 // editconfig 保证编辑器基本设置一致
 
 module.exports = {
+  globals: { // 防止组件中使用defineOptions定义组件名是报语法错误
+    defineOptions: "readonly",
+  },
   env: {
     // 环境，针对哪些环境的语法
     browser: true,

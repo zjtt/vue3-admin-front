@@ -121,7 +121,8 @@ const constantRoutes: Array<RouteRecordRaw> = [
           ),
         meta: {
           title: "Dashboard", // 需要配置声明文件否则无提示
-          icon: "dashboard"
+          icon: "dashboard",
+          noCache: true // 默认情况下没有 noCache 属性 或为 false 都会进行缓存, 为true 不缓存
         }
       }
     ]
