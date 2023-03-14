@@ -37,10 +37,26 @@ export const useTagsView = defineStore("tag", () => {
     const index = cachedViews.value.indexOf(view.name!);
     index > -1 && cachedViews.value.splice(index, 1);
   };
+  // 删除标签导航所有tag 除了affix为true的
+  const delAllView = () => {
+    visitedViews.value = visitedViews.value.filter((tag) =>
+      tag.meta.affix);
+    cachedViews.value = []
+  };
+  // 关闭其他tag 除了affix为true的和当前右键的tag
+  const delOthersViews = (view: RouteLocationNormalized) => {
+    visitedViews.value = visitedViews.value.filter(
+      (tag) => tag.meta.affix || tag.path === view.path
+    );
+    cachedViews.value = cachedViews.value.filter((name) => name !==
+      view.name);
+  };
   return {
     visitedViews, addView, delView,
     cachedViews,
     addCachedView,
     delCachedView,
+    delAllView,
+    delOthersViews,
   };
 });

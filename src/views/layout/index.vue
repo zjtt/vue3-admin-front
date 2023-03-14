@@ -48,7 +48,7 @@ import AppMain from "./components/AppMain.vue"
     .app-main {
       /* main = 100% - navbar + tagsview */
       min-height: calc(100vh - 84px);
-      background: red;
+      border: 1px solid red;
     }
   }
 }

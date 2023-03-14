@@ -12,7 +12,31 @@
           :key="index"
           :to="{ path: tag.path, query: tag.query }"
         >
-          <span>{{ tag.meta.title }}</span>
+          <!-- <span>{{ tag.meta.title }}</span> -->
+          <el-dropdown
+            trigger="contextmenu"
+            @command="(command:any) => handleTagCommand(command, tag)"
+          >
+            <span style="line-height: 26px">{{ tag.meta.title }}</span>
+            <!-- affix固定的路由tag是无法删除 -->
+            <span
+              v-if="!isAffix(tag)"
+              class="el-icon-close"
+              @click.prevent.stop="closeSelectedTag(tag)"
+            ></span>
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item command="all">关闭所有</el-dropdown-item>
+                <el-dropdown-item command="other">关闭其他</el-dropdown-item>
+                <el-dropdown-item
+                  command="self"
+                  v-if="!tag.meta || !tag.meta.affix"
+                  >关闭</el-dropdown-item
+                >
+                <el-dropdown-item command="refresh">刷新</el-dropdown-item>
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
           <el-icon class="icon-close" v-if="!isAffix(tag)">
             <CloseBold @click.prevent.stop="closeSelectedTag(tag)" />
           </el-icon>
@@ -28,6 +52,50 @@ import { RouteLocationNormalized, RouteRecordRaw } from "vue-router"
 import { CloseBold } from "@element-plus/icons-vue"
 import path from "path-browserify"
 import { routes } from "@/router"
+const enum TagCommandType {
+  All = "all",
+  Other = "other",
+  Self = "self",
+  Refresh = "refresh"
+}
+const handleTagCommand = (
+  command: TagCommandType,
+  view: RouteLocationNormalized
+) => {
+  switch (command) {
+    case TagCommandType.All: // 右键删除标签导航所有tag 除了affix为true的
+      handleCloseAllTag(view)
+      break
+    case TagCommandType.Other: // 关闭其他tag 除了affix为true的和当前右键的tag
+      handleCloseOtherTag(view)
+      break
+    case TagCommandType.Self: // 关闭当前右键的tag affix为true的tag下拉菜单中无此项
+      closeSelectedTag(view)
+      break
+    case TagCommandType.Refresh: // 刷新当前右键选中tag对应的路由
+      refreshSelectedTag(view)
+      break
+  }
+}
+const refreshSelectedTag = async (view: RouteLocationNormalized) => {
+  // 刷新前 将该路由名称从缓存列表中移除
+  store.delCachedView(view)
+  // router.push(view.path) // 无法刷新页面，因为页面没有任何变化
+  router.push("/redirect" + view.path) // 跳转重定向路由
+}
+const handleCloseAllTag = (view: RouteLocationNormalized) => {
+  // 对于是affix的tag是不会被删除的
+  store.delAllView()
+  // 关闭所有后 就让切换到剩下affix中最后一个tag
+  toLastView(visitedViews.value, view)
+}
+const handleCloseOtherTag = (view: RouteLocationNormalized) => {
+  store.delOthersViews(view)
+  if (!isActive(view)) {
+    // 删除其他tag后 让该view路由激活
+    router.push(view.path)
+  }
+}
 const fillterAffixTags = (routes: RouteRecordRaw[], basePath = "/") => {
   let tags: RouteLocationNormalized[] = []
   routes.forEach((route) => {
@@ -150,6 +218,9 @@ const toLastView = (
         background-color: #42b983;
         color: #fff;
         border-color: #42b983;
+        .el-dropdown {
+          color: #fff;
+        }
         &::before {
           position: relative;
           display: inline-block;

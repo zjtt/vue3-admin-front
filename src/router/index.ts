@@ -85,7 +85,6 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
         meta: {
           title: "User Management",
           icon: "list",
-          affix: true
         },
       },
     ],
@@ -122,11 +121,41 @@ const constantRoutes: Array<RouteRecordRaw> = [
         meta: {
           title: "Dashboard", // 需要配置声明文件否则无提示
           icon: "dashboard",
+          affix: true,
           noCache: true // 默认情况下没有 noCache 属性 或为 false 都会进行缓存, 为true 不缓存
         }
       }
     ]
-  }
+  },
+  {
+    path: "/redirect",
+    component: Layout,
+    meta: {
+      hidden: true,
+    },
+    children: [
+      {
+        // 带参数的动态路由正则匹配 文档说明
+        // https://next.router.vuejs.org/zh/guide/essentials/routematchingsyntax.html#%E5%8F%AF%E9%87%8D%E5%A4%8D%E7%9A%84%E5%8F%82%E6%95%B0
+        path: "/redirect/:path(.*)", // 要匹配多级路由 应该加*号
+        component: () => import("@/views/redirect/index.vue"),
+      },
+    ],
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: "/404",
+    meta: {
+      hidden: true
+    }
+  },
+  {
+    path: "/404",
+    component: () => import("@/views/error-page/404.vue"),
+    meta: {
+      hidden: true, // 404 hidden掉
+    },
+  },
 ]
 export const routes = [...constantRoutes, ...asyncRoutes];
 export default createRouter({
